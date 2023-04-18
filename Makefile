@@ -1,5 +1,6 @@
 .PHONY: all
-all: task stdinExample
+all: task stdinExample my_code
+
 
 task:	codec.h basic_main.c
 	gcc basic_main.c -L. -l Codec -o encoder
@@ -7,6 +8,9 @@ task:	codec.h basic_main.c
 stdinExample:	stdin_main.c
 		gcc stdin_main.c -L. -l Codec -o tester
 
+my_code:	my_stdin.c
+		gcc my_stdin.c -L. -l Codec -o myStdin
+
 .PHONY: clean
 clean:
-	-rm encoder tester libCodec.so 2>/dev/null
+	-rm encoder tester
