@@ -2,11 +2,9 @@
 
 
 # Authors
-Ohad Shirazi
+Ohad Shirazi and Dvir Biton
 
-Dvir Biton
-
-#About the project:
+# About the project:
 
 This is a synchronized thread-pool algorithm that encrypts and decrypts input data with a specific key
 
