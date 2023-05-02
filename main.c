@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <sys/sysinfo.h>
-#include <pthread.h>
 #include "node_thread.h"
 
 int main(int argc, char *argv[]) {
@@ -33,7 +31,7 @@ int main(int argc, char *argv[]) {
     char c;
     while ((c = getchar()) != EOF) {
         if (pool_place >= POOL_MAX_SIZE) {
-            printf("Halo Halo wtf?!\n");
+            printf("Maximum 25,600 chars for this task!\n");
             return 0;
         }
         if (node_place >= THREAD_BUFFER) {
@@ -48,7 +46,6 @@ int main(int argc, char *argv[]) {
 
     play(pool);
     print(pool);
-
 
     return 0;
 }

@@ -1,8 +1,8 @@
 #ifndef EX2_THREADPOOL_NODE_THREAD_H
 #define EX2_THREADPOOL_NODE_THREAD_H
 
-#define POOL_MAX_SIZE 100
-#define THREAD_BUFFER 80
+#define POOL_MAX_SIZE 200
+#define THREAD_BUFFER 128
 #include "codec.h"
 #include <pthread.h>
 
@@ -83,7 +83,6 @@ void play(threadPool* pool){
 }
 
 void print(threadPool*pool){
-    printf("data:\n");
     for (int i=0; i<pool->free;i++){
         printf("%s",pool->pool[i]->buf);
     }
