@@ -10,7 +10,7 @@ This is a synchronized thread-pool algorithm that encrypts and decrypts input da
 
 # How to run the project:
 
-make, and then ./coder <key> <flag>
+make, and then ./coder < key > < flag >
 
 flag = -e or -d (encrypt or decrypt)
 
