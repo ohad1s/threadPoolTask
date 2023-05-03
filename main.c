@@ -46,6 +46,7 @@ int main(int argc, char *argv[]) {
 
     play(pool);
     print(pool);
+    free_pool(pool);
 
     return 0;
 }

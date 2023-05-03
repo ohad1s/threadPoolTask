@@ -22,11 +22,6 @@ typedef struct threadPool
     int key;
 } threadPool, *PthreadPool;
 
-typedef struct {
-    char buf[THREAD_BUFFER];
-    int key;
-} ThreadArgs;
-
 
 threadPool* createPool(void* mission,int key) {
     threadPool* p = malloc(sizeof(threadPool));
@@ -86,6 +81,13 @@ void print(threadPool*pool){
     for (int i=0; i<pool->free;i++){
         printf("%s",pool->pool[i]->buf);
     }
+}
+
+void free_pool(threadPool*pool){
+    for (int i=0; i<pool->free;i++){
+        free(pool->pool[i]);
+    }
+    free(pool);
 }
 
 
